@@ -1,69 +1,44 @@
-# React + TypeScript + Vite
+# Lead Acquisition Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based, TypeScript-powered multi-step form for collecting loan application leads.
 
-Currently, two official plugins are available:
+## Key design decisions
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend:** Web app is built with React (Vite) for component-based architecture and easy integration with CMS platforms, as well as TypeScript for type safety.
+- **Styling:** The form is styled using custom CSS for flexibility, as it is intended to be embedded into a CMS website and should match it's design.
+- **Responsive Design:** The form is mobile-friendly and adapts to the website’s layout.
+- **Testing:** Project includes automated tests (unit and integration) that are written using the Vitest framework.
+- **Validation:** The form inputs for loan amount, email and phone number are validated using custom functions.
+- **Form handling:** `react-hook-form` library is used to handle form state, validation, and submission.
+- **Navigation:** `react-router-dom` library is used to handle navigation between pages, specifically to navigate the user to a "thank-you" page after the form is submitted.
+- **Submitting:** Once the form is submitted, the application simulates an API call to Salesforce and logs the data to the console.
+- **Embedding to a CMS:** Using Vite’s build process the app can be bundled as a static JavaScript bundle for easy embedding into CMS website. Command `npm run build` generates a `dist/` folder containing static JavaScript, CSS, and asset files that can be included in any HTML page.
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 1. Clone the repository
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+git clone https://github.com/oleksii1989/lead-acquisition-form.git
+cd lead-acquisition-form
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```
+npm install
+```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 3. Run the development server
+
+```
+npm run dev
+```
+
+The app will be available at [http://localhost:5173](http://localhost:5173).
+
+### 4. Run the tests
+
+```
+npm test
 ```
