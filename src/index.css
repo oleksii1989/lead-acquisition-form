@@ -7,8 +7,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, sans-serif;
   line-height: 1.5;
-  background-color: #f4f4f9;
-  color: #333;
+  /* background-color: #8cd775; */
+  /* background-color: #fdd9b5; */
+  background-color: #fff;
+  color: #404654;
 }
 #root {
   max-width: 600px;

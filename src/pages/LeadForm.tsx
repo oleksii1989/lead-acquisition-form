@@ -150,7 +150,7 @@ export default function LeadForm() {
                     isSubmitting ? styles.disabled : ""
                   }`}
                 >
-                  {isSubmitting ? "Submitting..." : "Submit"}
+                  Submit
                 </button>
               </div>
             </FormStep>

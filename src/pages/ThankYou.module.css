@@ -2,30 +2,36 @@
   background: white;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(9, 10, 12, 0.1) 0px 8px 16px -2px,
+    rgba(9, 10, 12, 0.02) 0px 0px 0px 1px;
 }
 
 .title {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #1a3c5e;
+  margin-bottom: 1.5rem;
+  color: #2e333d;
 }
 
-.message {
+.paragraph {
   margin-bottom: 1.5rem;
   font-size: 1rem;
+  color: #404654;
 }
 
 .button {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  background: #007bff;
-  color: white;
+  background: #54ba36;
+  color: #000000;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .button:hover {
-  background: #0056b3;
+  background: #6bcb4d;
+}
+
+.button:focus-visible {
+  outline: 3px solid #bde8b0;
 }

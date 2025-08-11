@@ -7,8 +7,8 @@
 .step {
   width: 30px;
   height: 30px;
-  background: #ccc;
-  color: white;
+  background: #fde6ce;
+  color: #000000;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -18,5 +18,5 @@
 }
 
 .step.active {
-  background: #007bff;
+  background: #f8820c;
 }
